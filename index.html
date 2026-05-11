@@ -3,61 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guide de nettoyage — Toyota Yaris GR Sport</title>
+<title>Guide de nettoyage — Toyota Yaris 4 Hybride GR Sport</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  /* ===== Base ===== */
+  /* ========== Variables ========== */
   :root {
     --bg: #FAFAFA;
     --ink: #1A1A1A;
-    --muted: #555;
+    --muted: #5A5A5A;
     --line: #E5E5E5;
     --card: #FFFFFF;
     --red: #EB0A1E;
     --red-dark: #B40818;
     --dark: #333333;
-    --green: #4CAF50;
-    --pink: #E91E63;
-    --brown: #795548;
-    --soft-green: #E8F5E9;
-    --soft-pink: #FCE4EC;
-    --soft-brown: #EFEBE9;
-    --soft-red: #FFEBEE;
+
+    --green: #2E7D32;     /* Supreme Shine */
+    --green-soft: #E8F5E9;
+    --pink: #E91E63;      /* Petites roses */
+    --pink-soft: #FCE4EC;
+    --brown: #795548;     /* Vieilles */
+    --brown-soft: #EFEBE9;
+    --navy: #1A237E;      /* Duo Twist */
+    --navy-soft: #E8EAF6;
+
     --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.05);
-    --shadow-lg: 0 4px 16px rgba(0,0,0,0.08);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.08);
     --radius: 10px;
+    --radius-lg: 14px;
   }
 
-  * { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
   body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--bg);
     color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* ========== Sticky nav ========== */
+  nav.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .nav-brand .dot-red {
+    width: 10px; height: 10px;
+    background: var(--red);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .nav-links {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    transition: all 0.15s;
+  }
+  .nav-links a:hover {
+    background: var(--red);
+    color: #fff;
+    border-color: var(--red);
+  }
+
+  /* ========== Layout ========== */
   .wrapper {
     max-width: 1080px;
     margin: 0 auto;
     padding: 32px 24px 80px;
   }
 
-  /* ===== Header ===== */
+  /* ========== Hero ========== */
   header.hero {
     border-top: 6px solid var(--red);
     background: var(--card);
     box-shadow: var(--shadow);
     padding: 36px 32px;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
@@ -65,9 +127,9 @@
   header.hero::after {
     content: "";
     position: absolute;
-    right: -40px; top: -40px;
-    width: 200px; height: 200px;
-    background: radial-gradient(circle, rgba(235,10,30,0.06) 0%, transparent 70%);
+    right: -50px; top: -50px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(235,10,30,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
   .eyebrow {
@@ -82,7 +144,7 @@
   h1 {
     font-size: 2.2rem;
     font-weight: 800;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     letter-spacing: -0.5px;
     line-height: 1.2;
   }
@@ -90,10 +152,10 @@
     color: var(--muted);
     font-size: 1.05rem;
     margin: 0;
-    max-width: 620px;
+    max-width: 640px;
   }
 
-  /* ===== Sections ===== */
+  /* ========== Sections ========== */
   section { margin-bottom: 56px; }
 
   h2 {
@@ -123,7 +185,6 @@
     font-size: 1.15rem;
     font-weight: 600;
     margin: 24px 0 12px;
-    color: var(--ink);
   }
   h4 {
     font-size: 1rem;
@@ -134,60 +195,53 @@
 
   .section-intro {
     color: var(--muted);
-    margin: 0 0 24px;
+    margin: 0 0 22px;
     font-size: 0.98rem;
   }
 
-  /* ===== Cards ===== */
+  /* ========== Cards ========== */
   .card {
     background: var(--card);
     border-radius: var(--radius);
-    padding: 24px;
+    padding: 22px 24px;
     box-shadow: var(--shadow);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     break-inside: avoid;
     page-break-inside: avoid;
   }
-  .card.accent {
-    border-left: 4px solid var(--red);
-  }
-  .card.warn {
-    background: var(--soft-red);
-    border-left: 4px solid var(--red);
-  }
-  .card.info {
-    background: #F0F4F8;
-    border-left: 4px solid var(--dark);
-  }
+  .card.accent { border-left: 4px solid var(--red); }
+  .card.warn   { background: #FFF5F5; border-left: 4px solid var(--red); }
+  .card.info   { background: #F0F4F8; border-left: 4px solid var(--dark); }
+  .card.note   { background: #FFF8E1; border-left: 4px solid #FFC107; }
   .card-title {
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     margin: 0 0 8px;
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  /* ===== Tables ===== */
+  /* ========== Tables ========== */
   .table-wrap {
     overflow-x: auto;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     background: var(--card);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 0.94rem;
   }
   th {
     background: var(--dark);
     color: white;
     text-align: left;
-    padding: 14px 16px;
+    padding: 13px 16px;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -198,91 +252,79 @@
   }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: #FAFAFA; }
-  td .ref {
-    display: inline-block;
-    font-family: 'SF Mono', Monaco, Consolas, monospace;
-    font-size: 0.85rem;
-    background: #F0F0F0;
-    padding: 2px 8px;
-    border-radius: 4px;
-    color: var(--dark);
-  }
 
-  /* ===== Badges (microfibres) ===== */
+  /* ========== Badges microfibres ========== */
   .badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 4px 10px;
+    padding: 3px 10px;
     border-radius: 999px;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: white;
+    white-space: nowrap;
   }
   .badge.green { background: var(--green); }
   .badge.pink  { background: var(--pink); }
   .badge.brown { background: var(--brown); }
-  .badge.red   { background: var(--red); }
+  .badge.navy  { background: var(--navy); }
   .badge .dot {
-    width: 8px; height: 8px;
+    width: 7px; height: 7px;
     background: white;
     border-radius: 50%;
-    opacity: 0.9;
+    opacity: 0.95;
   }
 
-  /* ===== Lexique tooltip-like ===== */
+  /* ========== Lexique ========== */
   .lex {
     background: #FFF8E1;
     border-left: 3px solid #FFC107;
     padding: 10px 14px;
     border-radius: 6px;
-    margin: 12px 0;
-    font-size: 0.92rem;
+    margin: 14px 0;
+    font-size: 0.93rem;
     color: var(--dark);
   }
   .lex strong { color: var(--ink); }
 
-  /* ===== Steps / Lists ===== */
-  ol.steps, ul.checks {
+  /* ========== Listes / steps ========== */
+  ol.steps, ul.checks, ul.dashes {
     padding-left: 0;
     list-style: none;
     margin: 12px 0;
   }
   ol.steps { counter-reset: step; }
-  ol.steps li {
+  ol.steps > li {
     counter-increment: step;
     padding: 8px 0 8px 44px;
     position: relative;
   }
-  ol.steps li::before {
+  ol.steps > li::before {
     content: counter(step);
     position: absolute;
-    left: 0; top: 8px;
-    width: 28px; height: 28px;
+    left: 0; top: 6px;
+    width: 30px; height: 30px;
     background: var(--red);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 700;
+    font-size: 0.88rem;
   }
   ul.checks li {
-    padding: 6px 0 6px 28px;
+    padding: 5px 0 5px 26px;
     position: relative;
   }
   ul.checks li::before {
     content: "";
     position: absolute;
-    left: 0; top: 13px;
+    left: 0; top: 12px;
     width: 8px; height: 8px;
     background: var(--red);
     border-radius: 50%;
-  }
-  ul.dashes {
-    padding-left: 0;
-    list-style: none;
   }
   ul.dashes li {
     padding: 4px 0 4px 16px;
@@ -296,13 +338,13 @@
     font-weight: 700;
   }
 
-  /* ===== Phase blocks (routine 2) ===== */
+  /* ========== Phases (routine 2) ========== */
   .phase {
     background: var(--card);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 22px 24px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     border-left: 4px solid var(--red);
     break-inside: avoid;
     page-break-inside: avoid;
@@ -312,27 +354,28 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
   }
   .phase-num {
     background: var(--red);
     color: white;
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     padding: 3px 10px;
     border-radius: 999px;
     letter-spacing: 1px;
   }
   .phase-title {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     font-weight: 700;
     margin: 0;
   }
 
-  /* ===== Quick info row ===== */
+  /* ========== Meta row ========== */
   .meta-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 20px;
+    gap: 8px 18px;
     color: var(--muted);
     font-size: 0.92rem;
     margin: 0 0 18px;
@@ -344,13 +387,13 @@
   }
   .meta-row svg { color: var(--red); }
 
-  /* ===== Schemas ===== */
+  /* ========== Schémas ========== */
   figure.schema {
     background: var(--card);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 24px;
-    margin: 16px 0 24px;
+    margin: 18px 0 22px;
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -359,6 +402,7 @@
     width: 100%;
     height: auto;
     max-width: 100%;
+    margin: 0 auto;
   }
   figcaption {
     text-align: center;
@@ -368,90 +412,19 @@
     margin-top: 12px;
   }
 
-  /* ===== TOC ===== */
-  nav.toc {
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 20px 24px;
-    margin-bottom: 40px;
-  }
-  nav.toc h3 {
-    margin: 0 0 12px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--red);
-    font-weight: 700;
-  }
-  nav.toc ol {
-    margin: 0;
-    padding-left: 20px;
-    color: var(--dark);
-    columns: 2;
-    column-gap: 32px;
-  }
-  nav.toc li {
-    padding: 3px 0;
-    break-inside: avoid;
-  }
-  nav.toc a {
-    color: var(--dark);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-  }
-  nav.toc a:hover { border-bottom-color: var(--red); }
-
-  /* ===== Icons inline ===== */
+  /* ========== Icons ========== */
   .icon {
     width: 18px; height: 18px;
     vertical-align: middle;
     flex-shrink: 0;
   }
 
-  /* ===== Grid layouts ===== */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-  }
+  /* ========== Grids ========== */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid-auto { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
 
-  /* Microfibre attribution cards */
-  .fiber-card {
-    border-radius: var(--radius);
-    padding: 16px;
-    color: white;
-    box-shadow: var(--shadow);
-    break-inside: avoid;
-  }
-  .fiber-card.green  { background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); }
-  .fiber-card.pink   { background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%); }
-  .fiber-card.brown  { background: linear-gradient(135deg, #795548 0%, #5D4037 100%); }
-  .fiber-card.red    { background: linear-gradient(135deg, #EB0A1E 0%, #B40818 100%); }
-  .fiber-card h4 {
-    color: white;
-    margin: 0 0 8px;
-    font-size: 1rem;
-  }
-  .fiber-card .yes, .fiber-card .no {
-    font-size: 0.88rem;
-    margin-top: 6px;
-  }
-  .fiber-card .yes::before { content: "✓ "; font-weight: 700; }
-  .fiber-card .no::before  { content: "✗ "; font-weight: 700; }
-
-  /* Recap columns */
+  /* ========== Recap columns ========== */
   .recap-col {
     background: var(--card);
     border-radius: var(--radius);
@@ -467,6 +440,14 @@
     text-transform: uppercase;
     letter-spacing: 1px;
   }
+  .recap-col strong.label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--dark);
+    margin: 12px 0 6px;
+  }
   .recap-col ul { padding-left: 0; list-style: none; margin: 0; }
   .recap-col li {
     padding: 5px 0 5px 22px;
@@ -479,124 +460,112 @@
     content: "";
     position: absolute;
     left: 2px; top: 11px;
-    width: 12px; height: 12px;
+    width: 11px; height: 11px;
     border: 1.5px solid var(--red);
     border-radius: 3px;
   }
 
-  /* ===== Footer ===== */
+  /* ========== Footer ========== */
   footer.foot {
     text-align: center;
     color: var(--muted);
     font-size: 0.85rem;
-    padding-top: 32px;
+    padding-top: 28px;
     border-top: 1px solid var(--line);
     margin-top: 40px;
   }
 
-  /* ===== Responsive ===== */
+  /* ========== Responsive ========== */
   @media (max-width: 720px) {
-    .wrapper { padding: 20px 16px 48px; }
-    header.hero { padding: 28px 22px; }
-    h1 { font-size: 1.65rem; }
+    .wrapper { padding: 24px 16px 48px; }
+    header.hero { padding: 26px 22px; }
+    h1 { font-size: 1.6rem; }
     h2 { font-size: 1.3rem; }
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-    nav.toc ol { columns: 1; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .nav-inner { padding: 10px 16px; }
+    .nav-links a { font-size: 0.78rem; padding: 5px 9px; }
     table { font-size: 0.88rem; }
     th, td { padding: 10px 12px; }
   }
-
   @media (max-width: 400px) {
     body { font-size: 15px; }
     h1 { font-size: 1.4rem; }
     .phase, .card, figure.schema { padding: 18px; }
+    .nav-brand { font-size: 0.85rem; }
   }
 
-  /* ===== Print ===== */
+  /* ========== Print ========== */
   @media print {
-    @page {
-      size: A4;
-      margin: 14mm;
-    }
-    body {
-      background: white;
-      font-size: 10.5pt;
-      line-height: 1.45;
-    }
-    .wrapper {
-      max-width: 100%;
-      padding: 0;
-    }
+    @page { size: A4; margin: 14mm; }
+    body { background: white; font-size: 10.5pt; line-height: 1.45; }
+    .wrapper { max-width: 100%; padding: 0; }
+    nav.topnav { display: none; }
     header.hero {
       box-shadow: none;
       border: 1px solid var(--line);
       border-top: 4px solid var(--red);
-      margin-bottom: 20px;
-      padding: 20px;
+      margin-bottom: 18px;
+      padding: 18px;
     }
-    .card, .phase, .table-wrap, figure.schema, nav.toc, .recap-col, .fiber-card {
+    .card, .phase, .table-wrap, figure.schema, .recap-col {
       box-shadow: none;
       border: 1px solid var(--line);
     }
-    .fiber-card {
-      color: var(--ink) !important;
-      background: white !important;
-      border-left: 4px solid;
-    }
-    .fiber-card.green  { border-left-color: var(--green); }
-    .fiber-card.pink   { border-left-color: var(--pink); }
-    .fiber-card.brown  { border-left-color: var(--brown); }
-    .fiber-card.red    { border-left-color: var(--red); }
-    .fiber-card h4 { color: var(--ink); }
-    nav.toc { display: none; }
-    section, .phase, .card, figure.schema, .table-wrap {
+    section, .phase, .card, figure.schema, .table-wrap, .recap-col {
       page-break-inside: avoid;
       break-inside: avoid;
     }
     h2, h3 { page-break-after: avoid; break-after: avoid; }
     a { color: var(--ink); text-decoration: none; }
-    section { margin-bottom: 24px; }
+    section { margin-bottom: 22px; }
+    th { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .badge, ol.steps > li::before, h2 .num, .phase-num {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
   }
 </style>
 </head>
 <body>
 
-<div class="wrapper">
+<!-- ============ STICKY NAV ============ -->
+<nav class="topnav" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <span class="dot-red"></span>
+      Yaris GR Sport — Guide de nettoyage
+    </a>
+    <div class="nav-links">
+      <a href="#materiel">Matériel</a>
+      <a href="#routine1">Routine 1 · Ville</a>
+      <a href="#routine2">Routine 2 · Jardin</a>
+      <a href="#routine3">Routine 3 · Intérieur</a>
+      <a href="#frequences">Calendrier</a>
+    </div>
+  </div>
+</nav>
 
+<div class="wrapper" id="top">
+
+  <!-- ============ HERO ============ -->
   <header class="hero">
-    <span class="eyebrow">Toyota Yaris GR Sport</span>
+    <span class="eyebrow">Toyota Yaris 4 Hybride · Pack GR Sport</span>
     <h1>Guide de nettoyage automobile</h1>
-    <p class="subtitle">Trois routines, six produits, des gestes précis. De l'entretien rapide en ville au lavage complet au jardin, en passant par l'intérieur — sans rayer, sans abîmer le piano black, sans jamais mélanger les microfibres.</p>
+    <p class="subtitle">Trois routines, sept produits, des gestes précis. De l'entretien rapide en ville au lavage complet au jardin, en passant par l'intérieur — sans rayer la peinture, sans abîmer le piano black, sans jamais mélanger les microfibres.</p>
   </header>
 
-  <nav class="toc" aria-label="Sommaire">
-    <h3>Sommaire</h3>
-    <ol>
-      <li><a href="#materiel">Matériel</a></li>
-      <li><a href="#microfibres">Microfibres : attribution</a></li>
-      <li><a href="#attention">Points d'attention GR Sport</a></li>
-      <li><a href="#gestes">Gestes fondamentaux</a></li>
-      <li><a href="#routine1">Routine 1 — Ville (Waterless)</a></li>
-      <li><a href="#routine2">Routine 2 — Lavage complet</a></li>
-      <li><a href="#routine3">Routine 3 — Intérieur</a></li>
-      <li><a href="#entretien">Entretien du matériel</a></li>
-      <li><a href="#frequences">Fréquences</a></li>
-      <li><a href="#recap">Récapitulatif</a></li>
-    </ol>
-  </nav>
-
-  <!-- ============ LEXIQUE GÉNÉRAL ============ -->
+  <!-- ============ LEXIQUE ============ -->
   <section id="lexique">
     <h2><span class="num dark">L</span>Lexique de base</h2>
     <p class="section-intro">Quelques termes employés tout au long du guide.</p>
 
-    <div class="grid-2">
+    <div class="grid-auto">
       <div class="card">
         <div class="card-title">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
           Panneau
         </div>
-        <p style="margin:0;font-size:0.94rem;">Une <strong>zone plane</strong> de carrosserie traitée en une fois : le toit, le capot, le coffre, une portière, un côté du pare-chocs. On travaille panneau par panneau pour éviter que le produit ne sèche.</p>
+        <p style="margin:0;font-size:0.93rem;">Une <strong>zone plane</strong> de carrosserie traitée en une seule fois : le toit, le capot, le coffre, une portière, un côté du pare-chocs. On travaille panneau par panneau pour éviter que le produit ne sèche.</p>
       </div>
 
       <div class="card">
@@ -604,7 +573,7 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
           Waterless
         </div>
-        <p style="margin:0;font-size:0.94rem;">Lavage <strong>sans eau courante</strong> : un spray encapsule la poussière, on essuie à la microfibre. Pour une voiture peu sale uniquement.</p>
+        <p style="margin:0;font-size:0.93rem;">Lavage <strong>sans eau courante</strong> : un spray encapsule la poussière, on essuie à la microfibre. Pour une voiture peu sale uniquement.</p>
       </div>
 
       <div class="card">
@@ -612,7 +581,7 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
           Sealant / Cire céramique
         </div>
-        <p style="margin:0;font-size:0.94rem;">Couche de <strong>protection invisible</strong> qui fait perler l'eau et facilite les lavages suivants. Le Ceramic Wax tient 6 à 8 semaines.</p>
+        <p style="margin:0;font-size:0.93rem;">Couche de <strong>protection invisible</strong> à base de SiO₂ qui fait perler l'eau et facilite les lavages suivants. Le Ceramic Wax tient 6 à 8 semaines.</p>
       </div>
 
       <div class="card">
@@ -620,7 +589,7 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
           pH neutre
         </div>
-        <p style="margin:0;font-size:0.94rem;">Un produit <strong>ni acide, ni basique</strong>. Indispensable pour les jantes noires : les acides attaquent le vernis.</p>
+        <p style="margin:0;font-size:0.93rem;">Un produit <strong>ni acide, ni basique</strong>. Indispensable pour les jantes noires : les acides attaquent le vernis.</p>
       </div>
 
       <div class="card">
@@ -628,7 +597,7 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16M12 4v16"/></svg>
           Piano black
         </div>
-        <p style="margin:0;font-size:0.94rem;">Plastique <strong>noir laqué brillant</strong> de l'habitacle (console, contour des aérateurs, bandeau central). Sensible à tout frottement à sec — micro-rayures garanties.</p>
+        <p style="margin:0;font-size:0.93rem;">Plastique <strong>noir laqué brillant</strong> de l'habitacle (console, contour des aérateurs, bandeau central). Sensible à tout frottement à sec — micro-rayures garanties.</p>
       </div>
 
       <div class="card">
@@ -636,7 +605,7 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14h16l-2 6H6z"/><path d="M8 14V8a4 4 0 0 1 8 0v6"/></svg>
           Bas de caisse
         </div>
-        <p style="margin:0;font-size:0.94rem;">La <strong>partie basse</strong> de la voiture (sous les portières, pare-chocs avant et arrière). C'est toujours la zone la plus sale — on la traite en dernier.</p>
+        <p style="margin:0;font-size:0.93rem;">La <strong>partie basse</strong> de la voiture (sous les portières, pare-chocs avant et arrière). Toujours la zone la plus sale — on la traite en dernier.</p>
       </div>
     </div>
   </section>
@@ -644,21 +613,22 @@
   <!-- ============ MATÉRIEL ============ -->
   <section id="materiel">
     <h2><span class="num">1</span>Matériel</h2>
-    <p class="section-intro">Six produits Meguiar's et un jeu d'accessoires dédiés. Chaque microfibre a un rôle unique — on ne mélange jamais.</p>
+    <p class="section-intro">Sept produits Meguiar's et un jeu d'accessoires dédiés. Chaque microfibre a un rôle unique — on ne mélange jamais.</p>
 
     <h3>Produits</h3>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>Produit</th><th>Réf.</th><th>Rôle</th></tr>
+          <tr><th>Produit</th><th>Rôle</th></tr>
         </thead>
         <tbody>
-          <tr><td>Shampoing Gold Class</td><td><span class="ref">G7164EU</span></td><td>Lavage complet</td></tr>
-          <tr><td>Ultimate All Wheel Cleaner</td><td><span class="ref">G180124</span></td><td>Nettoyant jantes</td></tr>
-          <tr><td>Shampoing et Cire sans eau</td><td><span class="ref">G3626F</span></td><td>Entretien rapide en ville</td></tr>
-          <tr><td>Quik Interior Detailer Cleaner</td><td><span class="ref">G13616F</span></td><td>Nettoyant intérieur</td></tr>
-          <tr><td>Nettoyant Vitre Clarté Parfaite</td><td><span class="ref">G8216F</span></td><td>Nettoyant vitres</td></tr>
-          <tr><td>Ceramic Wax</td><td><span class="ref">G190526EU</span></td><td>Protection céramique</td></tr>
+          <tr><td><strong>Ultimate Wash &amp; Wax</strong></td><td>Shampoing lavage complet (dépose une fine couche de cire carnauba à chaque lavage)</td></tr>
+          <tr><td><strong>Ultimate All Wheel Cleaner</strong></td><td>Nettoyant jantes pH neutre</td></tr>
+          <tr><td><strong>Shampoing et Cire sans eau</strong></td><td>Entretien rapide en ville sans eau</td></tr>
+          <tr><td><strong>Quik Interior Detailer Cleaner</strong></td><td>Nettoyant intérieur polyvalent</td></tr>
+          <tr><td><strong>Nettoyant Vitre Clarté Parfaite</strong></td><td>Nettoyant vitres sans ammoniaque</td></tr>
+          <tr><td><strong>Ceramic Wax</strong></td><td>Protection céramique SiO₂ hydrophobe</td></tr>
+          <tr><td><strong>Gold Class Gel de protection pneus</strong></td><td>Finition noire satinée des pneus</td></tr>
         </tbody>
       </table>
     </div>
@@ -670,124 +640,29 @@
           <tr><th>Accessoire</th><th>Rôle</th></tr>
         </thead>
         <tbody>
-          <tr><td>Gant microfibre Meguiar's <span class="ref">X210200EU</span></td><td>Lavage carrosserie au jardin</td></tr>
-          <tr><td>Serviette Duo Twist <span class="ref">X210400EU</span></td><td>Séchage après lavage</td></tr>
-          <tr><td><span class="badge green"><span class="dot"></span>vertes</span> &nbsp; 4 grandes microfibres Airlab 50×40 cm (neuves)</td><td>Extérieur : Waterless + sealant</td></tr>
-          <tr><td><span class="badge pink"><span class="dot"></span>roses</span> &nbsp; 3 petites microfibres Airlab 30×30 cm (neuves)</td><td>Vitres + piano black</td></tr>
+          <tr><td>Gant microfibre Meguiar's</td><td>Lavage carrosserie au jardin</td></tr>
+          <tr><td><span class="badge navy"><span class="dot"></span>navy</span> &nbsp; Serviette Duo Twist</td><td>Séchage après lavage</td></tr>
+          <tr><td><span class="badge green"><span class="dot"></span>vert foncé</span> &nbsp; 3 serviettes Supreme Shine 40×60 cm (neuves)</td><td>Extérieur : Waterless + essuyage sealant</td></tr>
+          <tr><td><span class="badge pink"><span class="dot"></span>roses</span> &nbsp; 3 petites microfibres Airlab roses 30×30 cm (neuves)</td><td>Vitres + piano black</td></tr>
+          <tr><td>Tampon applicateur pneu</td><td>Application du gel pneus</td></tr>
           <tr><td><span class="badge brown"><span class="dot"></span>vieilles</span> &nbsp; Vieilles microfibres (stock maison)</td><td>Intérieur courant + jantes</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="card info" style="margin-top:16px;">
+    <div class="card note" style="margin-top:14px;">
       <div class="card-title">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 6v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
-          Avant la première utilisation
+        Avant la première utilisation
       </div>
       <p style="margin:0;">Passer la <strong>Duo Twist</strong> et toutes les <strong>microfibres neuves</strong> en machine à 30 °C, lessive douce, <strong>sans adoucissant</strong>, pour retirer les fibres libres et la teinture.</p>
     </div>
   </section>
 
-  <!-- ============ MICROFIBRES ============ -->
-  <section id="microfibres">
-    <h2><span class="num">2</span>Attribution des microfibres</h2>
-    <p class="section-intro">Une microfibre qui touche une jante ne doit plus jamais toucher la peinture. Code couleur strict.</p>
-
-    <!-- SCHEMA 6 : attribution des microfibres -->
-    <figure class="schema" aria-label="Attribution des microfibres par zone">
-      <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quatre catégories de microfibres et leurs zones d'utilisation">
-        <!-- Title -->
-        <text x="400" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">Quelle microfibre pour quelle zone ?</text>
-
-        <!-- Vertes -->
-        <g>
-          <rect x="20" y="50" width="180" height="280" rx="10" fill="#4CAF50"/>
-          <rect x="38" y="68" width="144" height="60" rx="4" fill="#ffffff" opacity="0.18"/>
-          <text x="110" y="92" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">VERTES 50×40</text>
-          <text x="110" y="110" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">grandes, neuves</text>
-          <text x="38" y="150" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✓ AUTORISÉ</text>
-          <text x="38" y="170" font-family="Inter" font-size="11" fill="#fff">Waterless extérieur</text>
-          <text x="38" y="188" font-family="Inter" font-size="11" fill="#fff">Essuyage sealant</text>
-          <text x="38" y="220" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✗ INTERDIT</text>
-          <text x="38" y="240" font-family="Inter" font-size="11" fill="#fff">Jantes</text>
-          <text x="38" y="258" font-family="Inter" font-size="11" fill="#fff">Intérieur</text>
-        </g>
-
-        <!-- Roses -->
-        <g>
-          <rect x="210" y="50" width="180" height="280" rx="10" fill="#E91E63"/>
-          <rect x="228" y="68" width="144" height="60" rx="4" fill="#ffffff" opacity="0.18"/>
-          <text x="300" y="92" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">ROSES 30×30</text>
-          <text x="300" y="110" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">petites, neuves</text>
-          <text x="228" y="150" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✓ AUTORISÉ</text>
-          <text x="228" y="170" font-family="Inter" font-size="11" fill="#fff">Vitres (int. + ext.)</text>
-          <text x="228" y="188" font-family="Inter" font-size="11" fill="#fff">Piano black</text>
-          <text x="228" y="220" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✗ INTERDIT</text>
-          <text x="228" y="240" font-family="Inter" font-size="11" fill="#fff">Carrosserie</text>
-          <text x="228" y="258" font-family="Inter" font-size="11" fill="#fff">Jantes</text>
-        </g>
-
-        <!-- Brunes (vieilles) -->
-        <g>
-          <rect x="400" y="50" width="180" height="280" rx="10" fill="#795548"/>
-          <rect x="418" y="68" width="144" height="60" rx="4" fill="#ffffff" opacity="0.18"/>
-          <text x="490" y="92" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">VIEILLES</text>
-          <text x="490" y="110" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">stock maison</text>
-          <text x="418" y="150" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✓ AUTORISÉ</text>
-          <text x="418" y="170" font-family="Inter" font-size="11" fill="#fff">Tableau de bord, sièges</text>
-          <text x="418" y="188" font-family="Inter" font-size="11" fill="#fff">Volant, contre-portes</text>
-          <text x="418" y="206" font-family="Inter" font-size="11" fill="#fff">Jantes</text>
-          <text x="418" y="238" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✗ INTERDIT</text>
-          <text x="418" y="258" font-family="Inter" font-size="11" fill="#fff">Carrosserie, vitres</text>
-        </g>
-
-        <!-- Rouge (Duo Twist) -->
-        <g>
-          <rect x="590" y="50" width="190" height="280" rx="10" fill="#EB0A1E"/>
-          <rect x="608" y="68" width="154" height="60" rx="4" fill="#ffffff" opacity="0.18"/>
-          <text x="685" y="92" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">DUO TWIST</text>
-          <text x="685" y="110" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">serviette de séchage</text>
-          <text x="608" y="150" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✓ AUTORISÉ</text>
-          <text x="608" y="170" font-family="Inter" font-size="11" fill="#fff">Séchage après rinçage</text>
-          <text x="608" y="220" font-family="Inter" font-size="12" font-weight="600" fill="#fff">✗ INTERDIT</text>
-          <text x="608" y="240" font-family="Inter" font-size="11" fill="#fff">Essuyer un produit</text>
-          <text x="608" y="258" font-family="Inter" font-size="11" fill="#fff">Frotter</text>
-        </g>
-      </svg>
-      <figcaption>Une microfibre par usage. Une fois affectée, elle ne change pas de zone.</figcaption>
-    </figure>
-
-    <div class="grid-4">
-      <div class="fiber-card green">
-        <h4>Vertes 50×40 (neuves)</h4>
-        <div class="yes">Waterless extérieur</div>
-        <div class="yes">Essuyage du sealant</div>
-        <div class="no">Jamais sur les jantes</div>
-      </div>
-      <div class="fiber-card pink">
-        <h4>Roses 30×30 (neuves)</h4>
-        <div class="yes">Vitres</div>
-        <div class="yes">Piano black</div>
-        <div class="no">Rien d'autre</div>
-      </div>
-      <div class="fiber-card brown">
-        <h4>Vieilles (maison)</h4>
-        <div class="yes">Tableau de bord, sièges</div>
-        <div class="yes">Volant, contre-portes</div>
-        <div class="yes">Jantes</div>
-      </div>
-      <div class="fiber-card red">
-        <h4>Duo Twist</h4>
-        <div class="yes">Séchage uniquement</div>
-        <div class="no">Jamais pour essuyer un produit</div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ POINTS GR SPORT ============ -->
   <section id="attention">
-    <h2><span class="num">3</span>Points d'attention GR Sport</h2>
-    <p class="section-intro">Trois finitions sensibles spécifiques à la version Yaris GR Sport.</p>
+    <h2><span class="num">2</span>Points d'attention GR Sport</h2>
+    <p class="section-intro">Trois finitions sensibles spécifiques à cette version.</p>
 
     <div class="grid-3">
       <div class="card warn">
@@ -795,68 +670,90 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
           Piano black
         </div>
-        <p style="margin:0;font-size:0.94rem;">Console, aérateurs : <strong>micro-rayures au moindre frottement à sec</strong>. Toujours microfibre rose neuve + produit, geste léger.</p>
+        <p style="margin:0;font-size:0.93rem;">Console, aérateurs : <strong>micro-rayures au moindre frottement à sec</strong>. Toujours microfibre rose neuve + produit, geste léger.</p>
       </div>
       <div class="card warn">
         <div class="card-title">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
           Jantes noires
         </div>
-        <p style="margin:0;font-size:0.94rem;">Finition sensible aux acides. <strong>All Wheel Cleaner pH neutre uniquement.</strong> Jamais les nettoyants jantes de station.</p>
+        <p style="margin:0;font-size:0.93rem;">Finition sensible aux acides. <strong>All Wheel Cleaner pH neutre uniquement.</strong> Jamais les nettoyants jantes de station.</p>
       </div>
       <div class="card warn">
         <div class="card-title">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14h16l-2 6H6z"/><path d="M8 14V8a4 4 0 0 1 8 0v6"/></svg>
           Plastiques noirs extérieurs
         </div>
-        <p style="margin:0;font-size:0.94rem;">À <strong>protéger lors de l'application</strong> du Ceramic Wax : passage du même produit sur ces zones pour éviter qu'elles ne ternissent.</p>
+        <p style="margin:0;font-size:0.93rem;">À <strong>protéger lors de l'application</strong> du Ceramic Wax : passage du même produit pour éviter qu'ils ne ternissent.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ GESTES FONDAMENTAUX ============ -->
-  <section id="gestes">
-    <h2><span class="num">4</span>Gestes fondamentaux</h2>
-    <p class="section-intro">Quatre principes valables pour toutes les routines. À intégrer une fois pour toutes.</p>
+  <!-- ============ ROUTINE 1 ============ -->
+  <section id="routine1">
+    <h2><span class="num">3</span>Routine 1 — Entretien rapide en ville</h2>
+    <p class="section-intro">Sans eau, 10 à 15 minutes. Pour garder la voiture présentable au quotidien.</p>
+
+    <div class="meta-row">
+      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10–15 min</span>
+      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M12 3v18"/></svg>Voiture peu sale</span>
+      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Sans eau</span>
+    </div>
+
+    <div class="card">
+      <h4 style="margin-top:0;">Quand</h4>
+      <p style="margin:0 0 12px;">Dès que la voiture est poussiéreuse. Aussi souvent que nécessaire.</p>
+      <h4>Ne pas faire si</h4>
+      <p style="margin:0;">Boue, insectes collés, grain au toucher → attendre le lavage complet.</p>
+    </div>
+
+    <h3>Matériel</h3>
+    <ul class="dashes">
+      <li>Shampoing et Cire sans eau</li>
+      <li>2 à 3 serviettes <span class="badge green"><span class="dot"></span>Supreme Shine</span></li>
+      <li>1 petite microfibre <span class="badge pink"><span class="dot"></span>rose</span></li>
+    </ul>
+
+    <h3>Étape 1 — Plier chaque Supreme Shine en 4</h3>
 
     <!-- SCHEMA 1 : pliage microfibre -->
     <figure class="schema">
       <svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pliage de la microfibre en quatre">
-        <text x="400" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Plier une microfibre en 4 = 8 faces utilisables</text>
+        <text x="400" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">Plier une Supreme Shine en 4 = 8 faces utilisables</text>
 
         <!-- Step 1 : flat -->
         <g transform="translate(60, 60)">
-          <rect x="0" y="0" width="160" height="110" rx="6" fill="#4CAF50"/>
-          <rect x="0" y="0" width="160" height="110" rx="6" fill="url(#weave)" opacity="0.15"/>
-          <text x="80" y="135" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#333">1. À plat</text>
-          <text x="80" y="155" text-anchor="middle" font-family="Inter" font-size="11" fill="#666">2 faces</text>
+          <rect x="0" y="10" width="180" height="90" rx="6" fill="#2E7D32"/>
+          <rect x="0" y="10" width="180" height="90" rx="6" fill="url(#weave)" opacity="0.18"/>
+          <text x="90" y="135" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#333">1. À plat</text>
+          <text x="90" y="155" text-anchor="middle" font-family="Inter" font-size="11" fill="#666">2 faces</text>
         </g>
 
         <!-- Arrow -->
-        <path d="M235 115 L270 115" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+        <path d="M260 100 L300 100" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr)"/>
 
         <!-- Step 2 : folded in 2 -->
-        <g transform="translate(290, 60)">
-          <rect x="0" y="0" width="160" height="55" rx="4" fill="#4CAF50"/>
-          <rect x="0" y="55" width="160" height="55" rx="4" fill="#388E3C"/>
-          <line x1="0" y1="55" x2="160" y2="55" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <g transform="translate(320, 60)">
+          <rect x="0" y="10" width="160" height="45" rx="4" fill="#2E7D32"/>
+          <rect x="0" y="55" width="160" height="45" rx="4" fill="#1B5E20"/>
+          <line x1="0" y1="55" x2="160" y2="55" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3"/>
           <text x="80" y="135" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#333">2. Pliée en 2</text>
           <text x="80" y="155" text-anchor="middle" font-family="Inter" font-size="11" fill="#666">4 faces</text>
         </g>
 
         <!-- Arrow -->
-        <path d="M465 115 L500 115" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+        <path d="M500 100 L540 100" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr)"/>
 
         <!-- Step 3 : folded in 4 -->
-        <g transform="translate(520, 60)">
-          <rect x="0" y="0" width="80" height="55" rx="4" fill="#4CAF50"/>
-          <rect x="80" y="0" width="80" height="55" rx="4" fill="#43A047"/>
-          <rect x="0" y="55" width="80" height="55" rx="4" fill="#388E3C"/>
-          <rect x="80" y="55" width="80" height="55" rx="4" fill="#2E7D32"/>
-          <line x1="80" y1="0" x2="80" y2="110" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <line x1="0" y1="55" x2="160" y2="55" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <text x="80" y="135" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#333">3. Pliée en 4</text>
-          <text x="80" y="155" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#EB0A1E">8 faces utilisables</text>
+        <g transform="translate(560, 60)">
+          <rect x="0" y="10" width="90" height="45" rx="4" fill="#2E7D32"/>
+          <rect x="90" y="10" width="90" height="45" rx="4" fill="#388E3C"/>
+          <rect x="0" y="55" width="90" height="45" rx="4" fill="#1B5E20"/>
+          <rect x="90" y="55" width="90" height="45" rx="4" fill="#0D3F11"/>
+          <line x1="90" y1="10" x2="90" y2="100" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <line x1="0" y1="55" x2="180" y2="55" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <text x="90" y="135" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#333">3. Pliée en 4</text>
+          <text x="90" y="155" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="#EB0A1E">8 faces utilisables</text>
         </g>
 
         <defs>
@@ -871,25 +768,26 @@
       <figcaption>On change de face dès qu'elle est sale : la saleté ne revient pas sur la peinture.</figcaption>
     </figure>
 
+    <h3>Étape 2 — Carrosserie panneau par panneau</h3>
+
     <!-- SCHEMA 2 : ordre de lavage -->
     <figure class="schema">
       <svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ordre de lavage de la voiture, vue du dessus">
         <text x="400" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Ordre de lavage — toujours de haut en bas</text>
 
-        <!-- Car silhouette top-down -->
+        <!-- Car silhouette (vue dessus) -->
         <g transform="translate(220, 50)">
-          <!-- Outer body (bas de caisse / pare-chocs visible) -->
+          <!-- 4. bas de caisse / pare-chocs (le plus sombre) -->
           <rect x="0" y="0" width="360" height="280" rx="60" fill="#FFCDD2"/>
-          <!-- Portières -->
-          <rect x="20" y="80" width="320" height="120" rx="8" fill="#F8BBD0"/>
-          <!-- Capot/coffre (avant + arrière) -->
-          <rect x="40" y="20" width="280" height="60" rx="20" fill="#FFE0B2"/>
-          <rect x="40" y="200" width="280" height="60" rx="20" fill="#FFE0B2"/>
-          <!-- Vitres -->
-          <path d="M50 80 L80 30 L280 30 L310 80 Z" fill="#BBDEFB"/>
-          <path d="M50 200 L80 250 L280 250 L310 200 Z" fill="#BBDEFB"/>
-          <!-- Toit -->
-          <rect x="60" y="80" width="240" height="120" rx="4" fill="#C8E6C9"/>
+          <!-- 3. portières (un peu moins clair) -->
+          <rect x="20" y="80" width="320" height="120" rx="8" fill="#FFE0B2"/>
+          <!-- 2. capot/coffre + vitres -->
+          <rect x="40" y="20" width="280" height="60" rx="20" fill="#FFF3E0"/>
+          <rect x="40" y="200" width="280" height="60" rx="20" fill="#FFF3E0"/>
+          <path d="M50 80 L80 30 L280 30 L310 80 Z" fill="#E3F2FD"/>
+          <path d="M50 200 L80 250 L280 250 L310 200 Z" fill="#E3F2FD"/>
+          <!-- 1. toit (le plus clair = premier) -->
+          <rect x="60" y="80" width="240" height="120" rx="4" fill="#F1F8E9"/>
 
           <!-- Numbers -->
           <circle cx="180" cy="140" r="22" fill="#EB0A1E"/>
@@ -909,7 +807,7 @@
           <text x="320" y="145" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">3</text>
         </g>
 
-        <!-- Legend -->
+        <!-- Légende -->
         <g transform="translate(40, 60)">
           <text x="0" y="0" font-family="Inter" font-size="12" font-weight="700" fill="#1A1A1A">Légende</text>
           <circle cx="8" cy="20" r="6" fill="#EB0A1E"/>
@@ -924,51 +822,59 @@
           <text x="22" y="124" font-family="Inter" font-size="11" fill="#333">&nbsp;&nbsp;&nbsp;pare-chocs</text>
         </g>
 
-        <!-- Number 4 -->
-        <g transform="translate(620, 280)">
+        <!-- Cercle 4 -->
+        <g transform="translate(630, 290)">
           <circle cx="0" cy="0" r="20" fill="#EB0A1E"/>
           <text x="0" y="6" text-anchor="middle" font-family="Inter" font-size="16" font-weight="700" fill="#fff">4</text>
-          <text x="0" y="40" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#1A1A1A">Bas de caisse</text>
-          <text x="0" y="56" text-anchor="middle" font-family="Inter" font-size="11" fill="#666">(le plus sale)</text>
+          <text x="0" y="36" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#1A1A1A">Bas de caisse</text>
+          <text x="0" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#666">(le plus sale)</text>
         </g>
 
-        <text x="400" y="368" text-anchor="middle" font-family="Inter" font-size="12" font-style="italic" fill="#666">Le bas est toujours le plus sale — il vient en dernier.</text>
+        <text x="400" y="368" text-anchor="middle" font-family="Inter" font-size="12" font-style="italic" fill="#666">Toujours de haut en bas — le bas est le plus sale.</text>
       </svg>
       <figcaption>Vue du dessus : on commence par le toit, on finit par le bas de caisse.</figcaption>
     </figure>
 
-    <!-- SCHEMA 3 : bon geste vs mauvais geste -->
+    <p>Pour chaque panneau dans cet ordre :</p>
+    <ol class="steps">
+      <li>Pulvériser <strong>4–5 sprays</strong> de Shampoing et Cire sans eau sur le panneau.</li>
+      <li>Attendre <strong>2–3 secondes</strong> que la poussière soit encapsulée.</li>
+      <li>Essuyer en <strong>lignes droites</strong>, jamais en cercles.</li>
+      <li>Retourner la microfibre sur une face propre dès qu'elle est sale.</li>
+      <li>Repasser une fois pour <strong>lustrer</strong>.</li>
+      <li>Changer de microfibre quand les 8 faces sont utilisées.</li>
+    </ol>
+
+    <!-- SCHEMA 3 : bon vs mauvais geste -->
     <figure class="schema">
       <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bon geste contre mauvais geste">
         <text x="400" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Le bon geste</text>
 
-        <!-- Left : OK -->
+        <!-- OK -->
         <g transform="translate(60, 50)">
-          <rect x="0" y="0" width="320" height="190" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
-          <circle cx="40" cy="32" r="14" fill="#4CAF50"/>
+          <rect x="0" y="0" width="320" height="190" rx="10" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+          <circle cx="40" cy="32" r="14" fill="#2E7D32"/>
           <path d="M33 32 L38 37 L48 27" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="65" y="38" font-family="Inter" font-size="14" font-weight="700" fill="#2E7D32">BON GESTE</text>
+          <text x="65" y="38" font-family="Inter" font-size="14" font-weight="700" fill="#1B5E20">BON GESTE</text>
 
-          <!-- Parallel lines -->
-          <g stroke="#2E7D32" stroke-width="3" stroke-linecap="round">
-            <line x1="40" y1="80" x2="280" y2="80"/>
+          <g stroke="#1B5E20" stroke-width="3" stroke-linecap="round">
+            <line x1="40" y1="80"  x2="280" y2="80"/>
             <line x1="40" y1="105" x2="280" y2="105"/>
             <line x1="40" y1="130" x2="280" y2="130"/>
             <line x1="40" y1="155" x2="280" y2="155"/>
           </g>
-          <path d="M280 70 L295 80 L280 90" stroke="#2E7D32" stroke-width="2" fill="none"/>
+          <path d="M280 70 L295 80 L280 90" stroke="#1B5E20" stroke-width="2" fill="none"/>
 
-          <text x="160" y="180" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#2E7D32">Lignes droites parallèles</text>
+          <text x="160" y="180" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#1B5E20">Lignes droites parallèles</text>
         </g>
 
-        <!-- Right : NOT OK -->
+        <!-- KO -->
         <g transform="translate(420, 50)">
           <rect x="0" y="0" width="320" height="190" rx="10" fill="#FFEBEE" stroke="#EB0A1E" stroke-width="2"/>
           <circle cx="40" cy="32" r="14" fill="#EB0A1E"/>
           <path d="M33 25 L48 40 M48 25 L33 40" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
           <text x="65" y="38" font-family="Inter" font-size="14" font-weight="700" fill="#B40818">MAUVAIS GESTE</text>
 
-          <!-- Spirals/circles -->
           <g stroke="#B40818" stroke-width="2.5" fill="none">
             <circle cx="90" cy="120" r="22"/>
             <circle cx="155" cy="105" r="18"/>
@@ -980,153 +886,63 @@
           <text x="160" y="180" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#B40818">Cercles = micro-rayures</text>
         </g>
 
-        <text x="400" y="265" text-anchor="middle" font-family="Inter" font-size="12" font-style="italic" fill="#666">Les particules emprisonnées dans la microfibre rayent la peinture en cercles fermés.</text>
+        <text x="400" y="265" text-anchor="middle" font-family="Inter" font-size="12" font-style="italic" fill="#666">Les particules emprisonnées dans la microfibre rayent la peinture en cercles fermés visibles au soleil.</text>
       </svg>
       <figcaption>Toujours en lignes droites, jamais en cercles ni en spirales.</figcaption>
     </figure>
 
-    <div class="lex">
-      <strong>Pourquoi pas de cercles ?</strong> Une particule de poussière coincée dans la microfibre dessine un arc fermé visible sous le soleil (le fameux "swirl"). En lignes droites, la rayure éventuelle suit le sens de la lumière et reste invisible.
-    </div>
-  </section>
-
-  <!-- ============ ROUTINE 1 ============ -->
-  <section id="routine1">
-    <h2><span class="num">5</span>Routine 1 — Entretien rapide en ville</h2>
-    <p class="section-intro">Sans eau, 10 à 15 minutes. Pour garder la voiture présentable au quotidien.</p>
-
-    <div class="meta-row">
-      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10–15 min</span>
-      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M12 3v18"/></svg>Voiture peu sale</span>
-      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Sans eau</span>
-    </div>
-
-    <div class="card">
-      <h4 style="margin-top:0;">Quand</h4>
-      <p style="margin:0 0 12px;">Dès que la voiture est poussiéreuse. Aussi souvent que nécessaire.</p>
-      <h4>Ne pas faire si</h4>
-      <p style="margin:0;">Boue, insectes collés, grain au toucher → attendre le lavage complet.</p>
-    </div>
-
-    <h3>Matériel</h3>
-    <ul class="dashes">
-      <li>Shampoing et Cire sans eau <span class="ref">G3626F</span></li>
-      <li>2 à 3 grandes microfibres <span class="badge green"><span class="dot"></span>vertes</span></li>
-      <li>1 petite microfibre <span class="badge pink"><span class="dot"></span>rose</span></li>
-    </ul>
-
-    <h3>Étapes</h3>
-    <ol class="steps">
-      <li><strong>Plier chaque microfibre verte en 4</strong> — 8 faces utilisables par chiffon.</li>
-      <li>Pour chaque panneau, dans l'ordre <strong>toit → vitres → capot/coffre → portières → bas de caisse</strong> :
-        <ul class="checks" style="margin-top:8px;">
-          <li>Pulvériser 4–5 sprays de G3626F sur le panneau.</li>
-          <li>Attendre 2–3 secondes.</li>
-          <li>Essuyer en lignes droites, jamais en cercles.</li>
-          <li>Retourner la microfibre sur une face propre dès qu'elle est sale.</li>
-          <li>Changer de microfibre quand les 8 faces sont utilisées.</li>
-        </ul>
-      </li>
-      <li><strong>Vitres :</strong> Nettoyant Vitre Clarté Parfaite <span class="ref">G8216F</span> sur petite microfibre rose. Essuyer en lignes droites.</li>
-    </ol>
+    <h3>Étape 3 — Vitres</h3>
+    <p>Nettoyant Vitre Clarté Parfaite sur petite microfibre <span class="badge pink"><span class="dot"></span>rose</span>. Essuyer en lignes droites.</p>
   </section>
 
   <!-- ============ ROUTINE 2 ============ -->
   <section id="routine2">
-    <h2><span class="num">6</span>Routine 2 — Lavage complet au jardin</h2>
-    <p class="section-intro">45 minutes, 1× par mois à 1× toutes les 6 semaines. Le lavage en profondeur.</p>
+    <h2><span class="num">4</span>Routine 2 — Lavage complet au jardin</h2>
+    <p class="section-intro">50 minutes, 1× par mois à 1× toutes les 6 semaines. Le lavage en profondeur, jantes et pneus compris.</p>
 
     <div class="meta-row">
-      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>≈ 45 min</span>
+      <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>≈ 50 min</span>
       <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>Avec jet d'eau</span>
       <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>1×/mois à 1×/6 sem</span>
     </div>
 
-    <h3>Matériel</h3>
+    <h3>Matériel complet</h3>
     <ul class="dashes">
-      <li>Shampoing Gold Class <span class="ref">G7164EU</span></li>
-      <li>Ultimate All Wheel Cleaner <span class="ref">G180124</span></li>
-      <li>Ceramic Wax <span class="ref">G190526EU</span> — jours de protection uniquement</li>
-      <li>Nettoyant Vitre Clarté Parfaite <span class="ref">G8216F</span></li>
+      <li>Ultimate Wash &amp; Wax</li>
+      <li>Ultimate All Wheel Cleaner</li>
+      <li>Ceramic Wax (jours de protection uniquement)</li>
+      <li>Gold Class Gel de protection pneus</li>
+      <li>Nettoyant Vitre Clarté Parfaite</li>
       <li>Gant microfibre + 1 seau sur place + jet d'eau</li>
-      <li>Serviette Duo Twist + 1–2 grandes <span class="badge green"><span class="dot"></span>vertes</span> + 1 petite <span class="badge pink"><span class="dot"></span>rose</span> + 1 <span class="badge brown"><span class="dot"></span>vieille</span></li>
+      <li>Serviette <span class="badge navy"><span class="dot"></span>Duo Twist</span></li>
+      <li>1 à 2 <span class="badge green"><span class="dot"></span>Supreme Shine</span> + 1 petite <span class="badge pink"><span class="dot"></span>rose</span> + 1 <span class="badge brown"><span class="dot"></span>vieille</span></li>
+      <li>Tampon applicateur pneu</li>
     </ul>
 
-    <!-- SCHEMA 4 : cycle de lavage au gant -->
-    <figure class="schema">
-      <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cycle de lavage au gant">
-        <text x="360" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Cycle du gant — un panneau à la fois</text>
+    <div class="card info">
+      <div class="card-title">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V5h6v3"/></svg>
+        Préparation
+      </div>
+      <p style="margin:0;">Seau d'eau + <strong>2 à 3 bouchons</strong> d'Ultimate Wash &amp; Wax.</p>
+    </div>
 
-        <!-- 4 nodes in a circle around center 360,180 r=120 -->
-        <!-- Step 1: top -->
-        <g transform="translate(360, 70)">
-          <circle r="50" fill="#EB0A1E"/>
-          <text y="-6" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">1</text>
-          <text y="10" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Seau</text>
-          <text y="24" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">savonneux</text>
-        </g>
-
-        <!-- Step 2: right -->
-        <g transform="translate(490, 180)">
-          <circle r="50" fill="#333333"/>
-          <text y="-12" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">2</text>
-          <text y="4" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Laver</text>
-          <text y="18" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">le</text>
-          <text y="32" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">panneau</text>
-        </g>
-
-        <!-- Step 3: bottom -->
-        <g transform="translate(360, 290)">
-          <circle r="50" fill="#1976D2"/>
-          <text y="-12" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">3</text>
-          <text y="4" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Rincer</text>
-          <text y="18" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">le gant</text>
-          <text y="32" text-anchor="middle" font-family="Inter" font-size="10" fill="#fff">eau courante</text>
-        </g>
-
-        <!-- Step 4: left -->
-        <g transform="translate(230, 180)">
-          <circle r="50" fill="#EB0A1E"/>
-          <text y="-6" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">4</text>
-          <text y="10" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Retour</text>
-          <text y="24" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">au seau</text>
-        </g>
-
-        <!-- Arrows arcs between nodes -->
-        <g fill="none" stroke="#333" stroke-width="2.5" marker-end="url(#a2)">
-          <path d="M410 90 A 130 130 0 0 1 470 130"/>
-          <path d="M480 230 A 130 130 0 0 1 410 280"/>
-          <path d="M310 280 A 130 130 0 0 1 240 230"/>
-          <path d="M250 130 A 130 130 0 0 1 310 90"/>
-        </g>
-
-        <defs>
-          <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0 0 L10 5 L0 10 z" fill="#333"/>
-          </marker>
-        </defs>
-
-        <text x="360" y="180" text-anchor="middle" font-family="Inter" font-size="11" font-style="italic" fill="#666">répéter</text>
-        <text x="360" y="196" text-anchor="middle" font-family="Inter" font-size="11" font-style="italic" fill="#666">par panneau</text>
-      </svg>
-      <figcaption>Le rinçage du gant entre chaque panneau évite que les particules abrasives ne reviennent dans le seau.</figcaption>
-    </figure>
-
-    <!-- PHASES -->
+    <!-- PHASE 1 -->
     <div class="phase">
       <div class="phase-head">
         <span class="phase-num">PHASE 1</span>
         <h4 class="phase-title">Jantes — toujours en premier</h4>
       </div>
-      <p style="margin:0 0 10px;color:var(--muted);"><strong>Pourquoi :</strong> les éclaboussures du nettoyant jantes retombent sur la carrosserie. On les rince ensuite au pré-rinçage général.</p>
+      <p style="margin:0 0 10px;color:var(--muted);"><strong>Pourquoi :</strong> les éclaboussures du nettoyant jantes retombent sur la carrosserie. On les rincera ensuite au pré-rinçage général.</p>
       <ol class="steps">
-        <li>Jante <strong>froide</strong>. Pulvériser Ultimate All Wheel Cleaner <span class="ref">G180124</span>.</li>
-        <li>Agir 2–3 min, <strong>ne pas laisser sécher</strong>.</li>
+        <li>Jante <strong>froide</strong>. Pulvériser Ultimate All Wheel Cleaner.</li>
+        <li>Agir 2–3 min, <strong>ne jamais laisser sécher</strong>.</li>
         <li>Frotter avec une vieille microfibre.</li>
         <li>Rincer au jet. Répéter pour les 4 jantes.</li>
       </ol>
     </div>
 
+    <!-- PHASE 2 -->
     <div class="phase">
       <div class="phase-head">
         <span class="phase-num">PHASE 2</span>
@@ -1135,89 +951,136 @@
       <p style="margin:0;">Rincer toute la voiture au jet, <strong>de haut en bas</strong>. Décolle les grosses saletés avant le contact du gant.</p>
     </div>
 
+    <!-- PHASE 3 -->
     <div class="phase">
       <div class="phase-head">
         <span class="phase-num">PHASE 3</span>
         <h4 class="phase-title">Lavage au gant</h4>
       </div>
-      <p style="margin:0 0 10px;"><strong>Préparer :</strong> seau d'eau + 2 à 3 bouchons de Shampoing Gold Class <span class="ref">G7164EU</span>.</p>
       <p style="margin:0 0 10px;"><strong>Ordre :</strong> toit → vitres → capot/coffre → portières → bas de caisse.</p>
-      <p style="margin:0 0 8px;"><strong>Cycle par panneau :</strong></p>
-      <ol class="steps">
-        <li>Tremper le gant dans le seau savonneux.</li>
-        <li>Laver en lignes droites.</li>
-        <li>Rincer le gant sous l'eau courante (robinet ou jet).</li>
-        <li>Retremper dans le seau. Panneau suivant.</li>
-      </ol>
-      <p style="margin:10px 0 0;"><strong>Après tous les panneaux :</strong> rincer toute la voiture au jet.</p>
+
+      <!-- SCHEMA 4 : cycle gant -->
+      <figure class="schema" style="margin:12px 0;">
+        <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cycle de lavage au gant">
+          <text x="360" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Cycle du gant — un panneau à la fois</text>
+
+          <g transform="translate(360, 70)">
+            <circle r="50" fill="#EB0A1E"/>
+            <text y="-6" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">1</text>
+            <text y="10" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Seau</text>
+            <text y="24" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">savonneux</text>
+          </g>
+
+          <g transform="translate(490, 180)">
+            <circle r="50" fill="#333333"/>
+            <text y="-12" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">2</text>
+            <text y="4" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Laver</text>
+            <text y="18" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">le</text>
+            <text y="32" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">panneau</text>
+          </g>
+
+          <g transform="translate(360, 290)">
+            <circle r="50" fill="#1A237E"/>
+            <text y="-12" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">3</text>
+            <text y="4" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Rincer</text>
+            <text y="18" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">le gant</text>
+            <text y="32" text-anchor="middle" font-family="Inter" font-size="10" fill="#fff">eau courante</text>
+          </g>
+
+          <g transform="translate(230, 180)">
+            <circle r="50" fill="#EB0A1E"/>
+            <text y="-6" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">4</text>
+            <text y="10" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">Retour</text>
+            <text y="24" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">au seau</text>
+          </g>
+
+          <g fill="none" stroke="#333" stroke-width="2.5" marker-end="url(#a2)">
+            <path d="M410 90 A 130 130 0 0 1 470 130"/>
+            <path d="M480 230 A 130 130 0 0 1 410 280"/>
+            <path d="M310 280 A 130 130 0 0 1 240 230"/>
+            <path d="M250 130 A 130 130 0 0 1 310 90"/>
+          </g>
+
+          <defs>
+            <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="#333"/>
+            </marker>
+          </defs>
+
+          <text x="360" y="180" text-anchor="middle" font-family="Inter" font-size="11" font-style="italic" fill="#666">répéter</text>
+          <text x="360" y="196" text-anchor="middle" font-family="Inter" font-size="11" font-style="italic" fill="#666">par panneau</text>
+        </svg>
+        <figcaption>Le rinçage du gant entre chaque panneau évite que les particules abrasives ne reviennent dans le seau.</figcaption>
+      </figure>
+
+      <p style="margin:0 0 6px;"><strong>Cycle par panneau :</strong> seau savonneux → laver en lignes → rincer le gant à l'eau courante → retremper → panneau suivant.</p>
+      <p style="margin:0;"><strong>À la fin :</strong> rincer toute la voiture au jet.</p>
     </div>
 
+    <!-- PHASE 4 -->
     <div class="phase">
       <div class="phase-head">
         <span class="phase-num">PHASE 4</span>
         <h4 class="phase-title">Séchage</h4>
       </div>
-      <p style="margin:0;">Serviette Duo Twist <span class="ref">X210400EU</span>. <strong>Poser à plat</strong> sur un panneau, <strong>tirer vers soi</strong>. Ne jamais frotter. Essorer toutes les 2–3 passes.</p>
+      <p style="margin:0 0 10px;">Serviette <span class="badge navy"><span class="dot"></span>Duo Twist</span> posée à plat, tirer vers soi, essorer régulièrement. Jamais frotter.</p>
+
+      <!-- SCHEMA 5 : technique de séchage -->
+      <figure class="schema" style="margin:12px 0;">
+        <svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technique de séchage">
+          <text x="400" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Séchage à la Duo Twist</text>
+
+          <!-- OK -->
+          <g transform="translate(60, 50)">
+            <rect x="0" y="0" width="320" height="180" rx="10" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+            <circle cx="30" cy="28" r="12" fill="#2E7D32"/>
+            <path d="M24 28 L29 33 L37 24" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="52" y="33" font-family="Inter" font-size="13" font-weight="700" fill="#1B5E20">POSER ET TIRER</text>
+
+            <line x1="30" y1="135" x2="290" y2="135" stroke="#333" stroke-width="2"/>
+            <rect x="120" y="105" width="160" height="30" rx="4" fill="#1A237E"/>
+            <line x1="130" y1="120" x2="270" y2="120" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M120 120 L60 120" stroke="#1B5E20" stroke-width="3" fill="none" marker-end="url(#a3)"/>
+            <text x="160" y="165" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#1B5E20">Serviette à plat → tirer doucement</text>
+          </g>
+
+          <!-- KO -->
+          <g transform="translate(420, 50)">
+            <rect x="0" y="0" width="320" height="180" rx="10" fill="#FFEBEE" stroke="#EB0A1E" stroke-width="2"/>
+            <circle cx="30" cy="28" r="12" fill="#EB0A1E"/>
+            <path d="M23 21 L37 35 M37 21 L23 35" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="52" y="33" font-family="Inter" font-size="13" font-weight="700" fill="#B40818">FROTTER</text>
+
+            <line x1="30" y1="135" x2="290" y2="135" stroke="#333" stroke-width="2"/>
+            <path d="M150 110 q-5 -10 5 -15 q15 -8 25 5 q10 10 25 0 q15 -10 30 5 q10 12 0 25 q-10 12 -30 8 q-15 -3 -30 5 q-15 8 -25 -5 q-10 -10 0 -28" fill="#1A237E" stroke="#0D1454" stroke-width="1.5"/>
+            <path d="M140 95 L100 95" stroke="#B40818" stroke-width="2.5" fill="none" marker-end="url(#a3r)"/>
+            <path d="M240 95 L280 95" stroke="#B40818" stroke-width="2.5" fill="none" marker-end="url(#a3r)"/>
+            <text x="160" y="165" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#B40818">Serviette en boule = rayures</text>
+          </g>
+
+          <defs>
+            <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="#1B5E20"/>
+            </marker>
+            <marker id="a3r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="#B40818"/>
+            </marker>
+          </defs>
+        </svg>
+        <figcaption>La Duo Twist absorbe par capillarité — pas besoin de frotter.</figcaption>
+      </figure>
     </div>
 
-    <!-- SCHEMA 5 : technique de séchage -->
-    <figure class="schema">
-      <svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technique de séchage correcte et incorrecte">
-        <text x="400" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Séchage à la Duo Twist</text>
-
-        <!-- OK -->
-        <g transform="translate(60, 50)">
-          <rect x="0" y="0" width="320" height="180" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
-          <circle cx="30" cy="28" r="12" fill="#4CAF50"/>
-          <path d="M24 28 L29 33 L37 24" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="52" y="33" font-family="Inter" font-size="13" font-weight="700" fill="#2E7D32">POSER ET TIRER</text>
-
-          <!-- Surface line -->
-          <line x1="30" y1="135" x2="290" y2="135" stroke="#333" stroke-width="2"/>
-          <!-- Towel flat -->
-          <rect x="120" y="105" width="160" height="30" rx="4" fill="#EB0A1E" opacity="0.85"/>
-          <line x1="130" y1="120" x2="270" y2="120" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
-          <!-- Arrow pulling -->
-          <path d="M120 120 L60 120" stroke="#2E7D32" stroke-width="3" fill="none" marker-end="url(#a3)"/>
-          <text x="160" y="165" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#2E7D32">Serviette à plat → tirer</text>
-        </g>
-
-        <!-- KO -->
-        <g transform="translate(420, 50)">
-          <rect x="0" y="0" width="320" height="180" rx="10" fill="#FFEBEE" stroke="#EB0A1E" stroke-width="2"/>
-          <circle cx="30" cy="28" r="12" fill="#EB0A1E"/>
-          <path d="M23 21 L37 35 M37 21 L23 35" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-          <text x="52" y="33" font-family="Inter" font-size="13" font-weight="700" fill="#B40818">FROTTER</text>
-
-          <line x1="30" y1="135" x2="290" y2="135" stroke="#333" stroke-width="2"/>
-          <!-- Towel scrunched -->
-          <path d="M150 110 q-5 -10 5 -15 q15 -8 25 5 q10 10 25 0 q15 -10 30 5 q10 12 0 25 q-10 12 -30 8 q-15 -3 -30 5 q-15 8 -25 -5 q-10 -10 0 -28" fill="#EB0A1E" opacity="0.85" stroke="#B40818" stroke-width="1.5"/>
-          <!-- Back and forth arrows -->
-          <path d="M140 95 L100 95" stroke="#B40818" stroke-width="2.5" fill="none" marker-end="url(#a3r)"/>
-          <path d="M240 95 L280 95" stroke="#B40818" stroke-width="2.5" fill="none" marker-end="url(#a3r)"/>
-          <text x="160" y="165" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#B40818">Serviette en boule = rayures</text>
-        </g>
-
-        <defs>
-          <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0 0 L10 5 L0 10 z" fill="#2E7D32"/>
-          </marker>
-          <marker id="a3r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0 0 L10 5 L0 10 z" fill="#B40818"/>
-          </marker>
-        </defs>
-      </svg>
-      <figcaption>La Duo Twist absorbe par capillarité — pas besoin de frotter.</figcaption>
-    </figure>
-
+    <!-- PHASE 5 -->
     <div class="phase">
       <div class="phase-head">
         <span class="phase-num">PHASE 5</span>
         <h4 class="phase-title">Vitres</h4>
       </div>
-      <p style="margin:0;">Nettoyant Vitre Clarté Parfaite <span class="ref">G8216F</span> sur petite microfibre <span class="badge pink"><span class="dot"></span>rose</span>.</p>
+      <p style="margin:0;">Nettoyant Vitre Clarté Parfaite sur petite microfibre <span class="badge pink"><span class="dot"></span>rose</span>.</p>
     </div>
 
+    <!-- PHASE 6 -->
     <div class="phase">
       <div class="phase-head">
         <span class="phase-num">PHASE 6</span>
@@ -1225,17 +1088,88 @@
       </div>
       <p style="margin:0 0 10px;">Sur carrosserie <strong>légèrement humide</strong> après séchage.</p>
       <ol class="steps">
-        <li>2 à 3 sprays de Ceramic Wax <span class="ref">G190526EU</span> par panneau.</li>
-        <li>Étaler et <strong>essuyer immédiatement</strong> avec une grande microfibre <span class="badge green"><span class="dot"></span>verte</span>.</li>
+        <li>2 à 3 sprays de Ceramic Wax par panneau.</li>
+        <li>Étaler et <strong>essuyer immédiatement</strong> avec une <span class="badge green"><span class="dot"></span>Supreme Shine</span>.</li>
         <li>Passer aussi sur les <strong>plastiques noirs extérieurs</strong>.</li>
       </ol>
       <p style="margin:10px 0 0;color:var(--muted);"><strong>Ne pas laisser sécher.</strong></p>
+    </div>
+
+    <!-- PHASE 7 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num">PHASE 7</span>
+        <h4 class="phase-title">Pneus — à chaque lavage complet</h4>
+      </div>
+      <p style="margin:0 0 10px;">Dernière étape de la routine.</p>
+      <ol class="steps">
+        <li>Déposer une <strong>noisette</strong> de Gold Class Gel de protection pneus sur le tampon applicateur.</li>
+        <li>Étaler sur le <strong>flanc</strong> du pneu uniquement.</li>
+        <li><strong>Jamais sur la bande de roulement</strong> — rend la zone de contact glissante.</li>
+        <li>Laisser sécher quelques minutes avant de rouler. Répéter pour les 4 pneus.</li>
+      </ol>
+
+      <!-- SCHEMA 9 : application gel pneus -->
+      <figure class="schema" style="margin:12px 0;">
+        <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Application du gel pneus">
+          <text x="400" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Gel pneus — uniquement sur le flanc</text>
+
+          <!-- Pneu vue de face -->
+          <g transform="translate(400, 170)">
+            <!-- bande de roulement (cercle extérieur épais) -->
+            <circle r="130" fill="#1A1A1A"/>
+            <!-- flanc (anneau) -->
+            <circle r="115" fill="#2C2C2C"/>
+            <!-- jante extérieure -->
+            <circle r="80" fill="#4A4A4A"/>
+            <!-- centre jante -->
+            <circle r="20" fill="#1A1A1A"/>
+            <!-- branches jante -->
+            <g stroke="#4A4A4A" stroke-width="14" stroke-linecap="round">
+              <line x1="0" y1="-78" x2="0" y2="-22"/>
+              <line x1="0" y1="78" x2="0" y2="22"/>
+              <line x1="-78" y1="0" x2="-22" y2="0"/>
+              <line x1="78" y1="0" x2="22" y2="0"/>
+              <line x1="-55" y1="-55" x2="-16" y2="-16"/>
+              <line x1="55" y1="55" x2="16" y2="16"/>
+              <line x1="55" y1="-55" x2="16" y2="-16"/>
+              <line x1="-55" y1="55" x2="-16" y2="16"/>
+            </g>
+
+            <!-- Highlight flanc (vert) -->
+            <path d="M 0 -115 A 115 115 0 0 1 115 0" fill="none" stroke="#2E7D32" stroke-width="14" opacity="0.85"/>
+            <path d="M 0 -130 A 130 130 0 0 1 130 0" fill="none" stroke="#2E7D32" stroke-width="3" stroke-dasharray="6 4"/>
+
+            <!-- Highlight bande de roulement (rouge barré) -->
+            <path d="M -130 0 A 130 130 0 0 1 0 -130" fill="none" stroke="#EB0A1E" stroke-width="3" stroke-dasharray="6 4"/>
+            <line x1="-105" y1="-105" x2="-65" y2="-65" stroke="#EB0A1E" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-65" y1="-105" x2="-105" y2="-65" stroke="#EB0A1E" stroke-width="4" stroke-linecap="round"/>
+          </g>
+
+          <!-- Légende OK -->
+          <g transform="translate(40, 240)">
+            <circle cx="12" cy="12" r="12" fill="#2E7D32"/>
+            <path d="M5 12 L10 17 L19 7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="32" y="10" font-family="Inter" font-size="12" font-weight="700" fill="#1B5E20">FLANC</text>
+            <text x="32" y="26" font-family="Inter" font-size="11" fill="#333">appliquer ici</text>
+          </g>
+
+          <!-- Légende KO -->
+          <g transform="translate(620, 240)">
+            <circle cx="12" cy="12" r="12" fill="#EB0A1E"/>
+            <path d="M5 5 L19 19 M19 5 L5 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="32" y="10" font-family="Inter" font-size="12" font-weight="700" fill="#B40818">BANDE DE ROULEMENT</text>
+            <text x="32" y="26" font-family="Inter" font-size="11" fill="#333">jamais — rend glissant</text>
+          </g>
+        </svg>
+        <figcaption>Sur la zone de contact avec la route, le gel transforme le pneu en patinoire.</figcaption>
+      </figure>
     </div>
   </section>
 
   <!-- ============ ROUTINE 3 ============ -->
   <section id="routine3">
-    <h2><span class="num">7</span>Routine 3 — Intérieur</h2>
+    <h2><span class="num">5</span>Routine 3 — Intérieur</h2>
     <p class="section-intro">20 minutes, 1× par mois. Plastiques, sièges, vitres intérieures.</p>
 
     <div class="meta-row">
@@ -1245,8 +1179,8 @@
 
     <h3>Matériel</h3>
     <ul class="dashes">
-      <li>Quik Interior Detailer Cleaner <span class="ref">G13616F</span></li>
-      <li>Nettoyant Vitre Clarté Parfaite <span class="ref">G8216F</span></li>
+      <li>Quik Interior Detailer Cleaner</li>
+      <li>Nettoyant Vitre Clarté Parfaite</li>
       <li><span class="badge brown"><span class="dot"></span>vieilles</span> microfibres</li>
       <li>1 petite microfibre <span class="badge pink"><span class="dot"></span>rose</span></li>
     </ul>
@@ -1254,7 +1188,7 @@
     <h3>Étapes</h3>
     <ol class="steps">
       <li><strong>Aspirer :</strong> retirer les tapis, secouer, aspirer sièges, rails, coffre, console.</li>
-      <li><strong>Surfaces dures</strong> (vieille microfibre) : pulvériser G13616F <strong>sur la microfibre</strong> (jamais sur la surface). Essuyer dans cet ordre :
+      <li><strong>Surfaces dures</strong> (vieille microfibre) : Quik Interior Detailer Cleaner <strong>sur la microfibre</strong> (jamais sur la surface). Essuyer dans cet ordre :
         <ul class="checks" style="margin-top:8px;">
           <li>Tableau de bord</li>
           <li>Console</li>
@@ -1264,22 +1198,22 @@
           <li>Poignées</li>
         </ul>
       </li>
-      <li><strong>Piano black</strong> (petite microfibre rose neuve) : G13616F sur la microfibre, geste léger, sans appuyer. <strong>Jamais à sec.</strong></li>
-      <li><strong>Sièges tissu :</strong> pulvériser légèrement G13616F sur le tissu, frotter doucement avec une vieille microfibre, laisser sécher.</li>
-      <li><strong>Vitres intérieures :</strong> G8216F sur petite rose.</li>
+      <li><strong>Piano black</strong> (petite rose neuve) : même produit, geste léger, sans appuyer. <strong>Jamais à sec.</strong></li>
+      <li><strong>Sièges tissu :</strong> pulvériser légèrement sur le tissu, frotter doucement avec une vieille microfibre, laisser sécher.</li>
+      <li><strong>Vitres intérieures :</strong> Nettoyant Vitre Clarté Parfaite sur petite rose.</li>
     </ol>
   </section>
 
   <!-- ============ ENTRETIEN ============ -->
   <section id="entretien">
-    <h2><span class="num">8</span>Entretien du matériel</h2>
+    <h2><span class="num">6</span>Entretien du matériel</h2>
     <p class="section-intro">Une microfibre bien entretenue dure des années. Mal lavée, elle abîme la peinture.</p>
 
-    <div class="grid-2">
+    <div class="grid-auto">
       <div class="card accent">
         <div class="card-title">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 6v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6"/></svg>
-          Microfibres neuves + Duo Twist + gant
+          Supreme Shine + roses + Duo Twist + gant
         </div>
         <ul class="dashes" style="margin:8px 0 0;">
           <li>Machine 30–40 °C</li>
@@ -1287,6 +1221,14 @@
           <li><strong>SANS</strong> adoucissant</li>
           <li><strong>SANS</strong> sèche-linge</li>
         </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+          Tampon applicateur pneu
+        </div>
+        <p style="margin:0;">Rincer à l'<strong>eau tiède</strong>, sécher à l'air.</p>
       </div>
 
       <div class="card">
@@ -1317,8 +1259,8 @@
 
   <!-- ============ FRÉQUENCES + TIMELINE ============ -->
   <section id="frequences">
-    <h2><span class="num">9</span>Fréquences</h2>
-    <p class="section-intro">Tableau de référence et timeline visuelle sur 6 semaines.</p>
+    <h2><span class="num">7</span>Fréquences</h2>
+    <p class="section-intro">Tableau de référence et calendrier visuel sur 6 semaines.</p>
 
     <div class="table-wrap">
       <table>
@@ -1326,10 +1268,11 @@
           <tr><th>Action</th><th>Fréquence</th></tr>
         </thead>
         <tbody>
-          <tr><td>Entretien rapide Waterless</td><td>Dès que nécessaire</td></tr>
-          <tr><td>Lavage complet au jardin</td><td>1× par mois à 1× toutes les 6 semaines</td></tr>
+          <tr><td>Waterless (ville)</td><td>Dès que nécessaire</td></tr>
+          <tr><td>Lavage complet (jardin)</td><td>1× par mois à 1× toutes les 6 semaines</td></tr>
           <tr><td>Jantes</td><td>À chaque lavage complet</td></tr>
           <tr><td>Ceramic Wax</td><td>Toutes les 6–8 semaines</td></tr>
+          <tr><td>Pneus (gel)</td><td>À chaque lavage complet</td></tr>
           <tr><td>Intérieur</td><td>1× par mois</td></tr>
         </tbody>
       </table>
@@ -1340,110 +1283,151 @@
       <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendrier sur six semaines">
         <text x="400" y="22" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Calendrier type sur 6 semaines</text>
 
-        <!-- Axis -->
-        <line x1="60" y1="320" x2="760" y2="320" stroke="#333" stroke-width="2"/>
+        <!-- Axe -->
+        <line x1="60" y1="280" x2="760" y2="280" stroke="#333" stroke-width="2"/>
+
+        <!-- Repères + libellés semaines -->
         <g font-family="Inter" font-size="11" fill="#333">
-          <!-- Week ticks -->
-          <line x1="80" y1="320" x2="80" y2="328" stroke="#333" stroke-width="2"/>
-          <text x="80" y="345" text-anchor="middle">S1</text>
-          <line x1="195" y1="320" x2="195" y2="328" stroke="#333" stroke-width="2"/>
-          <text x="195" y="345" text-anchor="middle">S2</text>
-          <line x1="310" y1="320" x2="310" y2="328" stroke="#333" stroke-width="2"/>
-          <text x="310" y="345" text-anchor="middle">S3</text>
-          <line x1="425" y1="320" x2="425" y2="328" stroke="#333" stroke-width="2"/>
-          <text x="425" y="345" text-anchor="middle">S4</text>
-          <line x1="540" y1="320" x2="540" y2="328" stroke="#333" stroke-width="2"/>
-          <text x="540" y="345" text-anchor="middle">S5</text>
-          <line x1="655" y1="320" x2="655" y2="328" stroke="#333" stroke-width="2"/>
-          <text x="655" y="345" text-anchor="middle">S6</text>
+          <line x1="100" y1="280" x2="100" y2="288" stroke="#333" stroke-width="2"/>
+          <text x="100" y="305" text-anchor="middle">Sem. 1</text>
+          <line x1="220" y1="280" x2="220" y2="288" stroke="#333" stroke-width="2"/>
+          <text x="220" y="305" text-anchor="middle">Sem. 2</text>
+          <line x1="340" y1="280" x2="340" y2="288" stroke="#333" stroke-width="2"/>
+          <text x="340" y="305" text-anchor="middle">Sem. 3</text>
+          <line x1="460" y1="280" x2="460" y2="288" stroke="#333" stroke-width="2"/>
+          <text x="460" y="305" text-anchor="middle">Sem. 4</text>
+          <line x1="580" y1="280" x2="580" y2="288" stroke="#333" stroke-width="2"/>
+          <text x="580" y="305" text-anchor="middle">Sem. 5</text>
+          <line x1="700" y1="280" x2="700" y2="288" stroke="#333" stroke-width="2"/>
+          <text x="700" y="305" text-anchor="middle">Sem. 6</text>
         </g>
 
-        <!-- Lane labels -->
-        <g font-family="Inter" font-size="11" font-weight="600" fill="#1A1A1A">
-          <text x="55" y="78" text-anchor="end">Waterless</text>
-          <text x="55" y="138" text-anchor="end">Lavage complet</text>
-          <text x="55" y="198" text-anchor="end">Ceramic Wax</text>
-          <text x="55" y="258" text-anchor="end">Intérieur</text>
+        <!-- Sem 1 : petit spray waterless -->
+        <g transform="translate(100, 220)">
+          <rect x="-22" y="-40" width="44" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+          <!-- spray icon -->
+          <g transform="translate(-10,-32)" fill="#2E7D32">
+            <rect x="3" y="6" width="14" height="20" rx="2"/>
+            <rect x="6" y="0" width="8" height="6" rx="1"/>
+            <circle cx="22" cy="3" r="1.5"/>
+            <circle cx="24" cy="6" r="1.5"/>
+            <circle cx="22" cy="9" r="1.5"/>
+          </g>
+          <text y="35" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#1B5E20">Waterless</text>
+          <text y="48" text-anchor="middle" font-family="Inter" font-size="9" fill="#666">si besoin</text>
         </g>
 
-        <!-- Lane backgrounds -->
-        <g opacity="0.4">
-          <rect x="60" y="60" width="700" height="34" fill="#F0F0F0"/>
-          <rect x="60" y="120" width="700" height="34" fill="#F0F0F0"/>
-          <rect x="60" y="180" width="700" height="34" fill="#F0F0F0"/>
-          <rect x="60" y="240" width="700" height="34" fill="#F0F0F0"/>
+        <!-- Sem 2 : petit spray waterless -->
+        <g transform="translate(220, 220)">
+          <rect x="-22" y="-40" width="44" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+          <g transform="translate(-10,-32)" fill="#2E7D32">
+            <rect x="3" y="6" width="14" height="20" rx="2"/>
+            <rect x="6" y="0" width="8" height="6" rx="1"/>
+            <circle cx="22" cy="3" r="1.5"/>
+            <circle cx="24" cy="6" r="1.5"/>
+            <circle cx="22" cy="9" r="1.5"/>
+          </g>
+          <text y="35" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#1B5E20">Waterless</text>
+          <text y="48" text-anchor="middle" font-family="Inter" font-size="9" fill="#666">si besoin</text>
         </g>
 
-        <!-- Waterless : as needed - several dots -->
-        <g fill="#4CAF50">
-          <circle cx="120" cy="77" r="8"/>
-          <circle cx="235" cy="77" r="8"/>
-          <circle cx="350" cy="77" r="8"/>
-          <circle cx="465" cy="77" r="8"/>
-          <circle cx="580" cy="77" r="8"/>
-          <circle cx="695" cy="77" r="8"/>
-        </g>
-        <text x="120" y="50" text-anchor="middle" font-family="Inter" font-size="10" fill="#666">dès que nécessaire</text>
-
-        <!-- Lavage complet : week 1 and week 5 -->
-        <g fill="#EB0A1E">
-          <rect x="70" y="125" width="50" height="24" rx="4"/>
-          <rect x="530" y="125" width="50" height="24" rx="4"/>
-        </g>
-        <g font-family="Inter" font-size="10" font-weight="600" fill="#fff">
-          <text x="95" y="141" text-anchor="middle">JARDIN</text>
-          <text x="555" y="141" text-anchor="middle">JARDIN</text>
+        <!-- Sem 3 : petit spray waterless -->
+        <g transform="translate(340, 220)">
+          <rect x="-22" y="-40" width="44" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+          <g transform="translate(-10,-32)" fill="#2E7D32">
+            <rect x="3" y="6" width="14" height="20" rx="2"/>
+            <rect x="6" y="0" width="8" height="6" rx="1"/>
+            <circle cx="22" cy="3" r="1.5"/>
+            <circle cx="24" cy="6" r="1.5"/>
+            <circle cx="22" cy="9" r="1.5"/>
+          </g>
+          <text y="35" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#1B5E20">Waterless</text>
+          <text y="48" text-anchor="middle" font-family="Inter" font-size="9" fill="#666">si besoin</text>
         </g>
 
-        <!-- Ceramic Wax : week 1 (with lavage) and week 7 -->
-        <g fill="#333">
-          <rect x="125" y="185" width="50" height="24" rx="4"/>
+        <!-- Sem 4 : grosse icône lavage complet + intérieur -->
+        <g transform="translate(460, 200)">
+          <rect x="-50" y="-80" width="100" height="90" rx="10" fill="#FFEBEE" stroke="#EB0A1E" stroke-width="2"/>
+          <!-- big drop icon -->
+          <g transform="translate(-26,-72)" fill="#EB0A1E">
+            <path d="M14 0 C7 12 0 22 0 32 a14 14 0 0 0 28 0 C28 22 21 12 14 0 Z"/>
+          </g>
+          <g transform="translate(8,-72)" fill="#795548">
+            <rect x="0" y="6" width="20" height="20" rx="3"/>
+            <rect x="3" y="0" width="14" height="6" rx="1"/>
+          </g>
+          <text y="-8" text-anchor="middle" font-family="Inter" font-size="10" font-weight="700" fill="#B40818">LAVAGE COMPLET</text>
+          <text y="6" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#5D4037">+ Intérieur</text>
         </g>
-        <text x="150" y="201" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#fff">WAX</text>
-        <text x="700" y="201" font-family="Inter" font-size="10" fill="#666">→ S7-S8</text>
 
-        <!-- Intérieur : week 3 -->
-        <g fill="#795548">
-          <rect x="285" y="245" width="60" height="24" rx="4"/>
+        <!-- Sem 5 : petit spray -->
+        <g transform="translate(580, 220)">
+          <rect x="-22" y="-40" width="44" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+          <g transform="translate(-10,-32)" fill="#2E7D32">
+            <rect x="3" y="6" width="14" height="20" rx="2"/>
+            <rect x="6" y="0" width="8" height="6" rx="1"/>
+            <circle cx="22" cy="3" r="1.5"/>
+            <circle cx="24" cy="6" r="1.5"/>
+            <circle cx="22" cy="9" r="1.5"/>
+          </g>
+          <text y="35" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#1B5E20">Waterless</text>
+          <text y="48" text-anchor="middle" font-family="Inter" font-size="9" fill="#666">si besoin</text>
         </g>
-        <text x="315" y="261" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#fff">INTÉRIEUR</text>
 
-        <!-- Legend -->
-        <g transform="translate(60, 290)" font-family="Inter" font-size="10" fill="#333">
-          <rect x="0" y="-6" width="10" height="10" rx="2" fill="#4CAF50"/>
-          <text x="16" y="3">Waterless</text>
-          <rect x="100" y="-6" width="10" height="10" rx="2" fill="#EB0A1E"/>
-          <text x="116" y="3">Lavage complet</text>
-          <rect x="220" y="-6" width="10" height="10" rx="2" fill="#333"/>
-          <text x="236" y="3">Ceramic Wax</text>
-          <rect x="320" y="-6" width="10" height="10" rx="2" fill="#795548"/>
-          <text x="336" y="3">Intérieur</text>
+        <!-- Sem 6 : grosse icône lavage complet + sealant + intérieur -->
+        <g transform="translate(700, 200)">
+          <rect x="-50" y="-100" width="100" height="110" rx="10" fill="#FFEBEE" stroke="#EB0A1E" stroke-width="2"/>
+          <g transform="translate(-26,-92)" fill="#EB0A1E">
+            <path d="M14 0 C7 12 0 22 0 32 a14 14 0 0 0 28 0 C28 22 21 12 14 0 Z"/>
+          </g>
+          <g transform="translate(8,-92)" fill="#333">
+            <path d="M14 0 C7 12 0 22 0 32 a14 14 0 0 0 28 0 C28 22 21 12 14 0 Z"/>
+          </g>
+          <g transform="translate(-10,-50)" fill="#795548">
+            <rect x="0" y="6" width="20" height="20" rx="3"/>
+            <rect x="3" y="0" width="14" height="6" rx="1"/>
+          </g>
+          <text y="-8" text-anchor="middle" font-family="Inter" font-size="10" font-weight="700" fill="#B40818">LAVAGE COMPLET</text>
+          <text y="6" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#333">+ Sealant + Intérieur</text>
+        </g>
+
+        <!-- Légende -->
+        <g transform="translate(60, 335)" font-family="Inter" font-size="11" fill="#333">
+          <rect x="0" y="-8" width="12" height="12" rx="2" fill="#2E7D32"/>
+          <text x="18" y="2">Waterless</text>
+          <rect x="100" y="-8" width="12" height="12" rx="2" fill="#EB0A1E"/>
+          <text x="118" y="2">Lavage complet (+ pneus)</text>
+          <rect x="290" y="-8" width="12" height="12" rx="2" fill="#333"/>
+          <text x="308" y="2">Ceramic Wax</text>
+          <rect x="395" y="-8" width="12" height="12" rx="2" fill="#795548"/>
+          <text x="413" y="2">Intérieur</text>
         </g>
       </svg>
-      <figcaption>Exemple type : lavage complet en S1 (avec sealant) et S5, intérieur en S3, Waterless en intercalaire.</figcaption>
+      <figcaption>Les <strong>pneus</strong> se font systématiquement à chaque lavage complet (semaines 4 et 6 ici).</figcaption>
     </figure>
   </section>
 
-  <!-- ============ RÉCAPITULATIF ============ -->
+  <!-- ============ RÉCAPITULATIF VISUEL ============ -->
   <section id="recap">
-    <h2><span class="num">10</span>Récapitulatif</h2>
-    <p class="section-intro">Trois colonnes, trois contextes. Une checklist à imprimer si besoin.</p>
+    <h2><span class="num">8</span>Récapitulatif visuel</h2>
+    <p class="section-intro">Trois colonnes contextuelles, et le rappel d'attribution des microfibres.</p>
 
+    <!-- SCHEMA 8 : 3 colonnes -->
     <div class="grid-3">
       <div class="recap-col">
         <h4>Ville</h4>
-        <p style="margin:0 0 12px;color:var(--muted);font-size:0.88rem;">Waterless 10–15 min</p>
-        <strong style="font-size:0.85rem;">Produits</strong>
+        <p style="margin:0 0 4px;color:var(--muted);font-size:0.88rem;">Waterless · 10–15 min</p>
+        <strong class="label">Produits</strong>
         <ul>
-          <li>Shampoing et Cire sans eau (G3626F)</li>
-          <li>Nettoyant Vitre (G8216F)</li>
+          <li>Shampoing et Cire sans eau</li>
+          <li>Nettoyant Vitre Clarté Parfaite</li>
         </ul>
-        <strong style="font-size:0.85rem;">Accessoires</strong>
+        <strong class="label">Accessoires</strong>
         <ul>
-          <li>2–3 microfibres vertes</li>
+          <li>2–3 Supreme Shine</li>
           <li>1 microfibre rose</li>
         </ul>
-        <strong style="font-size:0.85rem;">Étapes</strong>
+        <strong class="label">Étapes</strong>
         <ul>
           <li>Plier en 4</li>
           <li>Spray + 2-3 s</li>
@@ -1454,46 +1438,49 @@
 
       <div class="recap-col">
         <h4>Jardin</h4>
-        <p style="margin:0 0 12px;color:var(--muted);font-size:0.88rem;">Lavage complet 45 min</p>
-        <strong style="font-size:0.85rem;">Produits</strong>
+        <p style="margin:0 0 4px;color:var(--muted);font-size:0.88rem;">Lavage complet · 50 min</p>
+        <strong class="label">Produits</strong>
         <ul>
-          <li>Gold Class (G7164EU)</li>
-          <li>All Wheel Cleaner (G180124)</li>
-          <li>Ceramic Wax (G190526EU)</li>
-          <li>Nettoyant Vitre (G8216F)</li>
+          <li>Ultimate Wash &amp; Wax</li>
+          <li>All Wheel Cleaner</li>
+          <li>Ceramic Wax (6-8 sem.)</li>
+          <li>Gel pneus</li>
+          <li>Nettoyant Vitre</li>
         </ul>
-        <strong style="font-size:0.85rem;">Accessoires</strong>
+        <strong class="label">Accessoires</strong>
         <ul>
           <li>Gant + seau + jet</li>
           <li>Duo Twist</li>
-          <li>1–2 vertes, 1 rose, 1 vieille</li>
+          <li>1-2 Supreme Shine, 1 rose, 1 vieille</li>
+          <li>Tampon pneu</li>
         </ul>
-        <strong style="font-size:0.85rem;">Phases</strong>
+        <strong class="label">Phases</strong>
         <ul>
           <li>Jantes</li>
           <li>Pré-rinçage</li>
           <li>Lavage au gant</li>
           <li>Séchage Duo Twist</li>
           <li>Vitres</li>
-          <li>Ceramic Wax (6-8 sem.)</li>
+          <li>Ceramic Wax</li>
+          <li>Pneus</li>
         </ul>
       </div>
 
       <div class="recap-col">
         <h4>Intérieur</h4>
-        <p style="margin:0 0 12px;color:var(--muted);font-size:0.88rem;">20 min, 1×/mois</p>
-        <strong style="font-size:0.85rem;">Produits</strong>
+        <p style="margin:0 0 4px;color:var(--muted);font-size:0.88rem;">20 min · 1×/mois</p>
+        <strong class="label">Produits</strong>
         <ul>
-          <li>Quik Interior Detailer (G13616F)</li>
-          <li>Nettoyant Vitre (G8216F)</li>
+          <li>Quik Interior Detailer</li>
+          <li>Nettoyant Vitre</li>
         </ul>
-        <strong style="font-size:0.85rem;">Accessoires</strong>
+        <strong class="label">Accessoires</strong>
         <ul>
           <li>Vieilles microfibres</li>
           <li>1 microfibre rose</li>
           <li>Aspirateur</li>
         </ul>
-        <strong style="font-size:0.85rem;">Étapes</strong>
+        <strong class="label">Étapes</strong>
         <ul>
           <li>Aspirer</li>
           <li>Surfaces dures</li>
@@ -1503,10 +1490,131 @@
         </ul>
       </div>
     </div>
+
+    <h3>Attribution des microfibres</h3>
+
+    <!-- SCHEMA 6 : attribution microfibres (4 blocs horizontaux) -->
+    <figure class="schema">
+      <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Attribution des microfibres">
+        <text x="400" y="24" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#1A1A1A">Une microfibre par usage — ne jamais mélanger</text>
+
+        <!-- Bloc 1 : Supreme Shine -->
+        <g transform="translate(40, 50)">
+          <rect width="720" height="80" rx="10" fill="#2E7D32"/>
+          <rect x="14" y="14" width="170" height="52" rx="6" fill="#fff" opacity="0.18"/>
+          <text x="99" y="40" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">SUPREME SHINE</text>
+          <text x="99" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">40×60 · neuves</text>
+          <!-- ✓ -->
+          <g transform="translate(210, 22)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Waterless carrosserie</text>
+          </g>
+          <g transform="translate(210, 48)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Essuyage sealant</text>
+          </g>
+          <!-- ✗ -->
+          <g transform="translate(490, 22)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#B40818" stroke-width="2" stroke-linecap="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Jantes</text>
+          </g>
+          <g transform="translate(490, 48)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#B40818" stroke-width="2" stroke-linecap="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Intérieur</text>
+          </g>
+        </g>
+
+        <!-- Bloc 2 : Roses -->
+        <g transform="translate(40, 140)">
+          <rect width="720" height="80" rx="10" fill="#E91E63"/>
+          <rect x="14" y="14" width="170" height="52" rx="6" fill="#fff" opacity="0.18"/>
+          <text x="99" y="40" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">AIRLAB ROSES</text>
+          <text x="99" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">30×30 · neuves</text>
+          <g transform="translate(210, 22)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Vitres (int. + ext.)</text>
+          </g>
+          <g transform="translate(210, 48)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Piano black</text>
+          </g>
+          <g transform="translate(490, 22)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#B40818" stroke-width="2" stroke-linecap="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Carrosserie</text>
+          </g>
+          <g transform="translate(490, 48)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#B40818" stroke-width="2" stroke-linecap="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Jantes</text>
+          </g>
+        </g>
+
+        <!-- Bloc 3 : Vieilles -->
+        <g transform="translate(40, 230)">
+          <rect width="720" height="80" rx="10" fill="#795548"/>
+          <rect x="14" y="14" width="170" height="52" rx="6" fill="#fff" opacity="0.18"/>
+          <text x="99" y="40" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">VIEILLES</text>
+          <text x="99" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">stock maison</text>
+          <g transform="translate(210, 16)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Intérieur courant</text>
+          </g>
+          <g transform="translate(210, 38)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Jantes</text>
+          </g>
+          <g transform="translate(210, 60)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Sièges</text>
+          </g>
+          <g transform="translate(490, 32)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#B40818" stroke-width="2" stroke-linecap="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Peinture extérieure</text>
+          </g>
+        </g>
+
+        <!-- Bloc 4 : Duo Twist -->
+        <g transform="translate(40, 320)">
+          <rect width="720" height="80" rx="10" fill="#1A237E"/>
+          <rect x="14" y="14" width="170" height="52" rx="6" fill="#fff" opacity="0.18"/>
+          <text x="99" y="40" text-anchor="middle" font-family="Inter" font-size="13" font-weight="700" fill="#fff">DUO TWIST</text>
+          <text x="99" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff" opacity="0.9">serviette</text>
+          <g transform="translate(210, 32)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 10 L9 14 L16 6" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Séchage uniquement</text>
+          </g>
+          <g transform="translate(490, 22)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#B40818" stroke-width="2" stroke-linecap="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Essuyage produit</text>
+          </g>
+          <g transform="translate(490, 48)">
+            <circle cx="10" cy="10" r="10" fill="#fff"/>
+            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#B40818" stroke-width="2" stroke-linecap="round"/>
+            <text x="28" y="14" font-family="Inter" font-size="12" fill="#fff">Nettoyage</text>
+          </g>
+        </g>
+
+        <text x="400" y="425" text-anchor="middle" font-family="Inter" font-size="11" font-style="italic" fill="#666">Une fois affectée, une microfibre ne change pas de catégorie.</text>
+      </svg>
+      <figcaption>Code couleur strict : une microfibre qui touche une jante ne touchera plus jamais la peinture.</figcaption>
+    </figure>
   </section>
 
   <footer class="foot">
-    <p>Guide de nettoyage — Toyota Yaris GR Sport. Document de référence imprimable en A4.</p>
+    <p>Guide de nettoyage — Toyota Yaris 4 Hybride · Pack GR Sport. Document de référence imprimable en A4.</p>
   </footer>
 
 </div>
